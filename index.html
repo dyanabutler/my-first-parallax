@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Parallax Scrolling Website | HTML CSS JS</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+TmFE5o4CM2Ck3fQzJ3w5wB3" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">DYANA</a>
+            
+            <ul>
+                <li><a href="#home-section" class="active">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#art-section">Art</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </header>
+
+        <section id="home-section">
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="rockBG.png" id="rockBG">
+            <h2 id="text">Fly Me To The Moon</h2>
+            <a href="#about-section" id="btn">Explore</a>
+            <img src="rockfront.png" id="rockfront">
+        </section>
+
+        <div class="sec" id="about-section"> 
+            <h2>About</h2>
+            <p> This website was created for the sole purpose of trying out the famous parallax effect. Made with just HTML, CSS, and a sprinkle of Javascript.</p>
+        </div>
+
+        <div class="sec" id="art-section">
+            <h2>Art Cred</h2>
+            <p>
+                <a href="https://www.freepik.com/free-vector/alien-planet-parallax-background-space-game-extraterrestrial-2d-landscape-with-rocks-crystals-two-suns-purple-sky-cartoon-animation-scene-view-with-separated-layers-vector-illustration_21087522.htm#query=parallax&from_query=paralla&position=3&from_view=search&track=sph">A special thanks to this talented artist for allowing their work to enhance this digital experience.</a>
+            
+                </p>
+           
+        </div>
+
+        <div class="sec" id="contact-section"> 
+            <h2>Let's Connect</h2>
+            <p>If you're inspired by what you see or just want to drop a hello, I'd love to hear from you! Head over to main website to get in touch.</p>
+            <button><a href="dyanabutler.com/#contact">Commense Connect</a></button>
+        </div>
+
+        <footer>
+            <p>Visit my main website at <a href="http://dyanabutler.com">dyanabutler.com</a></p>
+        </footer>
+           
+           <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let rockBG = document.getElementById('rockBG');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let rockfront = document.getElementById('rockfront');
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                rockBG.style.top = value * 0.5 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1 + 'px';
+                rockfront.style.top = value * 0 + 'px';
+                header.style.top = value * 0.5 + 'px';
+                
+            })
+           </script>
+
+
+    </body>
+</html>

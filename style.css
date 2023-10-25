@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#000000, #190531);
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #A766D0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+/* section::before {
+    content: ('');
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #000000, transparent);
+} */
+section::before {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    height: 300px;  /* Increased the height for a smoother transition */
+    background: linear-gradient(to top, #190531, transparent); /* Match the gradient start color to the background color of .sec */
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    mix-blend-mode: screen;
+    object-fit: contain;
+}
+
+section img#rockfront
+{
+    z-index: 10;
+    
+}
+
+#text {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+/* .sec {
+    position: relative;
+    padding: 100px;
+    background: #A766D0;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1.2em;
+    color: #fff;
+} */
+
+/* Add gradient to the top of .sec divs */
+
+
+
+.sec {
+    position: relative;
+    padding: 50px 100px; /* Added vertical padding for spacing, maintained horizontal padding for content */
+    background:linear-gradient(to bottom, transparent, #564094);
+    text-align: center; /* Center the text */
+    margin: 100px auto; /* Vertical margin for spacing, auto on the sides to center the block */
+    max-width: 800px; /* Optional: Limit width and center block-level elements */
+    overflow: hidden;
+   
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px; /* Increase spacing beneath the heading */
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Spacing after each paragraph for visual separation */
+    color: #fff;
+}
+
+
+
+.sec a {
+    color: #fff; /* Make sure links are visible against the background */
+}
+
+.sec a:hover {
+    text-decoration: none; /* Optional: Provide a hover effect for links */
+}
+
+.sec button {
+    padding: 10px 20px;
+    background-color: #A765D0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.sec button a {
+    text-decoration: none;
+    
+}
+
+.sec button:hover {
+    background-color: #000; 
+}
+
+footer {
+    background-color: #2b1055; 
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+}
+
+footer a {
+    color: #A766D0; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff; 
+}
