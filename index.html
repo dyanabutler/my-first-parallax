@@ -19,7 +19,7 @@
         </header>
 
         <section id="home-section">
-            <img src="Stars.png" id="Stars">
+            <img src="Stars.png" id="stars">
             <img src="moon.png" id="moon">
             <img src="rockBG.png" id="rockBG">
             <h2 id="text">Fly Me To The Moon</h2>
@@ -52,7 +52,7 @@
         </footer>
            
            <script>
-            let Stars = document.getElementById('Stars');
+            let stars = document.getElementById('stars');
             let moon = document.getElementById('moon');
             let rockBG = document.getElementById('rockBG');
             let text = document.getElementById('text');
@@ -62,7 +62,7 @@
 
             window.addEventListener('scroll', function() {
                 let value = window.scrollY;
-                Stars.style.left = value * 0.25 + 'px';
+                stars.style.left = value * 0.25 + 'px';
                 moon.style.top = value * 1.05 + 'px';
                 rockBG.style.top = value * 0.5 + 'px';
                 text.style.marginRight = value * 4 + 'px';
