@@ -1,5 +1,7 @@
+/* Imports the 'Poppins' font in multiple weights from Google Fonts for use throughout the page. */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Universal reset to remove default margins and padding; sets 'box-sizing' to ensure elements are sized by border-box, and sets the default font for all elements. 'scroll-behavior: smooth' enables smooth scrolling for anchor links. */
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +10,14 @@
     scroll-behavior: smooth;
 }
 
+/* Sets a minimum height for the body to ensure it fills the viewport and applies a background gradient. 'overflow-x: hidden' prevents horizontal scroll. */
 body {
     min-height: 100vh;
     background: linear-gradient(#000000, #190531);
     overflow-x: hidden;
 }
 
+/* Styles the header with absolute positioning and high z-index to ensure it's always on top, with padding and flexbox for layout. */
 header {
     position: absolute;
     top: 0;
@@ -23,9 +27,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000; 
 }
 
+/* Logo styling with uppercase text, letter spacing, and white color to stand out against the dark background. */
 header .logo {
     color: #fff;
     font-weight: 700;
@@ -35,17 +40,20 @@ header .logo {
     letter-spacing: 2px;
 }
 
+/* Flexbox layout for the header navigation list for even spacing and centering of items. */
 header ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Removes list styling and adds margin to each list item for spacing. */
 header ul li {
     list-style: none;
     margin-left: 20px;
 }
 
+/* Styles for the navigation links with padding for clickable area and rounded borders for aesthetics. */
 header ul li a {
     text-decoration: none;
     padding: 6px 15px;
@@ -53,12 +61,14 @@ header ul li a {
     border-radius: 20px;
 }
 
+/* Hover and active styles for navigation links to indicate interactivity and the current section. */
 header ul li a:hover,
 header ul li a.active {
     background: #fff;
     color: #A766D0;
 }
 
+/* Section base styling sets up the section's size and uses flexbox for centering its content. 'overflow: hidden' enables the clipping of child elements for the parallax effect. */
 section {
     position: relative;
     width: 100%;
@@ -68,26 +78,19 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
 }
 
-/* section::before {
-    content: ('');
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #000000, transparent);
-} */
+/* This pseudo-element styles a gradient at the bottom of sections for a fade-out effect, enhancing the parallax experience. */
 section::before {
     content: '';
     position: absolute;
     bottom: -150px;
     width: 100%;
-    height: 300px;  /* Increased the height for a smoother transition */
-    background: linear-gradient(to top, #190531, transparent); /* Match the gradient start color to the background color of .sec */
+    height: 300px;
+    background: linear-gradient(to top, #190531, transparent);
 }
 
+/* Absolute positioning for images in sections allows them to be placed independently of the text, essential for parallax. */
 section img {
     position: absolute;
     top: 0;
@@ -98,17 +101,18 @@ section img {
     pointer-events: none;
 }
 
+/* The 'moon' image uses 'mix-blend-mode: screen' to blend with the dark background. 'object-fit: contain' keeps its aspect ratio. */
 section img#moon {
     mix-blend-mode: screen;
     object-fit: contain;
 }
 
-section img#rockfront
-{
+/* Foreground 'rockfront' image is given a higher z-index to ensure it's on top of other elements. */
+section img#rockfront {
     z-index: 10;
-    
 }
 
+/* Styles for the main heading text with absolute positioning and a large font size. It starts off-screen to the right. */
 #text {
     position: absolute;
     right: -350px;
@@ -116,9 +120,9 @@ section img#rockfront
     white-space: nowrap;
     font-size: 7.5vw;
     z-index: 9;
-    
 }
 
+/* Button styling with inline-block for layout, padding for size, rounded borders, and initial transformation for an off-screen start position. */
 #btn {
     text-decoration: none;
     display: inline-block;
@@ -131,60 +135,40 @@ section img#rockfront
     transform: translateY(100px);
 }
 
-/* .sec {
-    position: relative;
-    padding: 100px;
-    background: #A766D0;
-}
-
-.sec h2 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.sec p {
-    font-size: 1.2em;
-    color: #fff;
-} */
-
-/* Add gradient to the top of .sec divs */
-
-
-
+/* Additional section styling for non-parallax sections with padding, background gradient, and centered text. */
 .sec {
     position: relative;
-    padding: 50px 100px; /* Added vertical padding for spacing, maintained horizontal padding for content */
+    padding: 50px 100px;
     background:linear-gradient(to bottom, transparent, #564094);
-    text-align: center; /* Center the text */
-    margin: 100px auto; /* Vertical margin for spacing, auto on the sides to center the block */
-    max-width: 800px; /* Optional: Limit width and center block-level elements */
+    text-align: center;
+    margin: 100px auto;
+    max-width: 800px;
     overflow: hidden;
-   
 }
 
+/* Heading and paragraph styles within '.sec' sections for size, color, and margin for visual separation. */
 .sec h2 {
     font-size: 3.5em;
-    margin-bottom: 20px; /* Increase spacing beneath the heading */
+    margin-bottom: 20px;
     color: #fff;
 }
 
 .sec p {
     font-size: 1.2em;
-    margin-bottom: 20px; /* Spacing after each paragraph for visual separation */
+    margin-bottom: 20px;
     color: #fff;
 }
 
-
-
+/* Link styling within '.sec' to ensure visibility and a hover effect for better user experience. */
 .sec a {
-    color: #fff; /* Make sure links are visible against the background */
+    color: #fff;
 }
 
 .sec a:hover {
-    text-decoration: none; /* Optional: Provide a hover effect for links */
+    text-decoration: none;
 }
 
+/* Button styling within '.sec' with padding, background color, border-radius for rounded corners, and a hover effect. */
 .sec button {
     padding: 10px 20px;
     background-color: #A765D0;
@@ -192,33 +176,33 @@ section img#rockfront
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
 }
 
 .sec button a {
     text-decoration: none;
-    
 }
 
 .sec button:hover {
-    background-color: #000; 
+    background-color: #000;
 }
 
+/* Footer styling with background color, padding, and text styling for consistency with the page's color scheme. */
 footer {
-    background-color: #2b1055; 
+    background-color: #2b1055;
     padding: 10px 0;
     text-align: center;
     color: #fff;
     font-size: 1em;
 }
 
+/* Link styling in the footer with a color transition effect on hover. */
 footer a {
-    color: #A766D0; 
+    color: #A766D0;
     text-decoration: none;
     transition: 0.3s;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #fff; 
+    color: #fff;
 }
